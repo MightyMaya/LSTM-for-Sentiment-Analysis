@@ -9,6 +9,10 @@ Sentiment analysis on movie reviews using a Long Short-Term Memory (LSTM) model.
 ## Dataset
 Dataset used is the IMDB dataset for movie reviews: https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
 
+<div align = "center">
+    <img src="Pictures/dataset.png" alt="Image of the dataset" width="300">
+</div>
+
 ## Required Libraries
 ```
 tensorflow
@@ -86,8 +90,16 @@ def predict_sentiment(text):
        return sentiment, (f"Positive {probability}, \nNegative: {1 - probability}")
 ```
 4. Finally,a user interface is made for the sentiment analyzer. The interface takes movie review as input and outputs the sentiment and probability.
+
+<div align = "center">
+    <img src="Pictures/UI.png" alt="Image of the dataset" width="300">
+</div>
+
 5. The user interface is made with gradio so it will be publicly available for 72 hours on a link.
-![Alt 
-Text](pictures/dataset.png)
+
+<div align = "center">
+    <img src="Pictures/UI2.png" alt="Image of the dataset" width="300">
+</div>
+
 
 
