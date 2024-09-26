@@ -88,6 +88,6 @@ def predict_sentiment(text):
 4. Finally,a user interface is made for the sentiment analyzer. The interface takes movie review as input and outputs the sentiment and probability.
 5. The user interface is made with gradio so it will be publicly available for 72 hours on a link.
 ![Alt 
-Text]()
+Text](pictures/dataset.png)
 
 
