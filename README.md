@@ -6,6 +6,12 @@
 ## Project Description 
 Sentiment analysis on movie reviews using a Long Short-Term Memory (LSTM) model. The project contains 2 notebooks, one for training the model and one for directly using the trained model.
 
+You can run the inference notebook directly without training the model from scratch, you only need to:
+1. Download the zipped model
+2. Download the zipped tokenizer
+3. Upload them to google colab
+4. Run the notebook on colab
+
 ## Dataset
 Dataset used is the IMDB dataset for movie reviews: https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
 
