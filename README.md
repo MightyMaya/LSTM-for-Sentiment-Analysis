@@ -58,4 +58,36 @@ encoded_labels = [1 if label == "positive" else 0 for label in labels]
 4. An LSTM model is built and trained on the training data.
 5. The model is then saved and evaluated on the testing data
 
+## Inference
+1. Trained model is unzipped and loaded along with the tokenizer.
+```
+import tensorflow as tf
+model = tf.keras.models.load_model('/content/my_sentiment_model.keras')
+
+import pickle
+with open('/content/tokenizer.pickle', 'rb') as handle:
+    tokenizer = pickle.load(handle)
+```
+2. Text is tokenized and padded for the model to be able to process it like in training.
+3. A function called predict_sentiment is defined to to make the models predictions easier to understand.
+```
+def predict_sentiment(text):
+   padded_sequence = preprocess_given_text(text)
+
+   prediction = model.predict(padded_sequence)
+
+   if prediction[0][0] > prediction[0][1]:
+       sentiment = "Negative"
+       probability = prediction[0][0]
+       return sentiment, (f"Negative {probability}, \nPositive: {1 - probability}")
+   else:
+       sentiment = "Positive"
+       probability = prediction[0][1]
+       return sentiment, (f"Positive {probability}, \nNegative: {1 - probability}")
+```
+4. Finally,a user interface is made for the sentiment analyzer. The interface takes movie review as input and outputs the sentiment and probability.
+5. The user interface is made with gradio so it will be publicly available for 72 hours on a link.
+![Alt 
+Text]()
+
 
