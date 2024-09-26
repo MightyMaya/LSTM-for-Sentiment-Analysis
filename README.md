@@ -92,13 +92,13 @@ def predict_sentiment(text):
 4. Finally,a user interface is made for the sentiment analyzer. The interface takes movie review as input and outputs the sentiment and probability.
 
 <div align = "center">
-    <img src="Pictures/UI.png" alt="Image of the dataset" width="300">
+    <img src="Pictures/UI.png" alt="Image of the UI" width="500">
 </div>
 
 5. The user interface is made with gradio so it will be publicly available for 72 hours on a link.
 
 <div align = "center">
-    <img src="Pictures/UI2.png" alt="Image of the dataset" width="300">
+    <img src="Pictures/UI2.png" alt="Image of the UI" width="500">
 </div>
 
 
